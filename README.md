@@ -1,20 +1,330 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/f1ac672e-87c8-403d-92d6-29c5e25b2a05
-
-## Run Locally
-
-**Prerequisites:**  Node.js
+\# CogniCare Health Portal
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+
+CogniCare Health Portal is an AI-powered cognitive wellness and screening platform that provides structured cognitive assessments, performance scoring, health tracking, and personalized insights.
+
+
+
+The application combines a \*\*React + TypeScript frontend\*\*, \*\*Node.js + Express backend\*\*, and \*\*Google Gemini API\*\* for optional AI-assisted analysis.
+
+
+
+\## 🌐 Live Demo
+
+
+
+https://cognicare-0ygs.onrender.com
+
+
+
+\## ✨ Features
+
+
+
+\* User registration and login
+
+\* Password recovery
+
+\* Multidomain cognitive screening
+
+\* Deterministic cognitive scoring
+
+\* AI-assisted analysis using Google Gemini
+
+\* Personalized cognitive insights
+
+\* Cognitive health dashboard
+
+\* Cognitive health tracking
+
+\* AI fallback to deterministic analysis when Gemini is unavailable
+
+\* Responsive user interface
+
+\* Server-side API integration
+
+
+
+\## 🛠️ Technology Stack
+
+
+
+| Category        | Technologies                       |
+
+| --------------- | ---------------------------------- |
+
+| Frontend        | React, TypeScript, Vite            |
+
+| Styling \& UI    | CSS, Lucide React, Motion          |
+
+| Backend         | Node.js, Express, TypeScript       |
+
+| AI              | Google Gemini API, `@google/genai` |
+
+| Package Manager | npm                                |
+
+| Version Control | Git, GitHub                        |
+
+
+
+\## 📁 Project Structure
+
+
+
+```text
+
+cognicare-health-portal/
+
+│
+
+├── assets/
+
+├── src/
+
+│   ├── components/
+
+│   │   ├── Auth/
+
+│   │   ├── Dashboard/
+
+│   │   ├── Screening/
+
+│   │   └── Navbar.tsx
+
+│   │
+
+│   ├── data/
+
+│   ├── utils/
+
+│   ├── App.tsx
+
+│   ├── index.css
+
+│   ├── main.tsx
+
+│   └── types.ts
+
+│
+
+├── .env.example
+
+├── .gitignore
+
+├── index.html
+
+├── metadata.json
+
+├── package.json
+
+├── server.ts
+
+├── tsconfig.json
+
+├── vite.config.ts
+
+└── README.md
+
+```
+
+
+
+\## 🚀 Installation
+
+
+
+\### Prerequisites
+
+
+
+\* Node.js
+
+\* npm
+
+\* Git
+
+
+
+\### Clone the Repository
+
+
+
+```bash
+
+git clone https://github.com/Dev-usha/cognicare-health-portal.git
+
+cd cognicare-health-portal
+
+```
+
+
+
+\### Install Dependencies
+
+
+
+```bash
+
+npm install
+
+```
+
+
+
+\## 🔐 Environment Configuration
+
+
+
+Create a `.env` file in the project root:
+
+
+
+```env
+
+GEMINI\_API\_KEY=your\_gemini\_api\_key
+
+APP\_URL=http://localhost:3000
+
+```
+
+
+
+\## ▶️ Run Locally
+
+
+
+Start the development server:
+
+
+
+```bash
+
+npm run dev
+
+```
+
+
+
+\## 🏭 Production Build
+
+
+
+Build the application:
+
+
+
+```bash
+
+npm run build
+
+```
+
+
+
+Start the production server:
+
+
+
+```bash
+
+npm start
+
+```
+
+
+
+\## 🔌 API
+
+
+
+\### Health Check
+
+
+
+```http
+
+GET /api/health
+
+```
+
+
+
+Returns the backend status and Gemini configuration status.
+
+
+
+\### Screening Analysis
+
+
+
+```http
+
+POST /api/screening/analyze
+
+```
+
+
+
+Processes cognitive screening responses and returns AI-assisted or deterministic analysis.
+
+
+
+\## 🤖 AI Analysis
+
+
+
+CogniCare uses Google Gemini for optional AI-assisted analysis of screening responses.
+
+
+
+If the Gemini service is unavailable, the application uses its deterministic scoring system as a fallback so that the screening workflow can continue.
+
+
+
+\## 🔒 Security
+
+
+
+\* API credentials are stored through environment variables.
+
+\* `.env` is excluded from Git tracking.
+
+\* Gemini API requests are handled by the backend.
+
+\* API keys should never be exposed in frontend code or committed to the repository.
+
+
+
+\## 📜 Available Scripts
+
+
+
+| Command           | Description                  |
+
+| ----------------- | ---------------------------- |
+
+| `npm install`     | Install dependencies         |
+
+| `npm run dev`     | Start development server     |
+
+| `npm run build`   | Build for production         |
+
+| `npm start`       | Start production server      |
+
+| `npm run preview` | Preview the production build |
+
+| `npm run lint`    | Run TypeScript checks        |
+
+| `npm run clean`   | Remove generated build files |
+
+
+
+\## ⚠️ Disclaimer
+
+
+
+CogniCare is intended for \*\*cognitive wellness, screening support, and research-oriented use\*\*. Its results are not a medical diagnosis and should not replace professional medical evaluation or treatment.
+
+
+
